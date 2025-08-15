@@ -1,0 +1,200 @@
+.header {
+  backdrop-filter: blur(10px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  height: 80px;
+  transition: all 0.3s ease;
+
+  // Semi-transparent background and shadow on scroll
+  &--scrolled {
+    background: linear-gradient(135deg, rgba(15, 15, 35, 0.8) 0%, rgba(26, 26, 46, 0.8) 50%, rgba(22, 33, 62, 0.8) 100%);
+    backdrop-filter: blur(15px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  }
+
+  &__container {
+    width: 100%;
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 0 30px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    .image {
+      width: 105px;
+      height: 30px;
+      object-fit: contain;
+    }
+  }
+
+  &__nav {
+    &-list {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      gap: 40px;
+    }
+
+    &-link {
+      text-decoration: none;
+      color: #ffffff;
+      font-weight: 400;
+      font-size: 16px;
+      transition: all 0.3s ease;
+      position: relative;
+
+      &:hover {
+        color: #00d4ff;
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background: linear-gradient(90deg, #00d4ff, #8b5cf6);
+        transition: width 0.3s ease;
+      }
+
+      &:hover::after {
+        width: 100%;
+      }
+    }
+  }
+
+  &__language {
+    position: relative;
+
+    &-btn {
+      width: 68px;
+      height: 32px;
+      padding: 4px 10px;
+      border-radius: 50px;
+      background: rgba(222, 222, 248, 1);
+      border: none;
+      font-family: 'Oceanic Grotesk TRIAL', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 100%;
+      color: rgba(51, 51, 51, 1);
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-transform: lowercase;
+      
+      &:hover {
+        background: rgba(200, 200, 230, 1);
+        transform: translateY(-1px);
+      }
+
+      &:active {
+        transform: translateY(0);
+      }
+    }
+
+    &-menu {
+      position: absolute;
+      top: 100%;
+      right: 0;
+      margin-top: 8px;
+      background: rgba(15, 15, 35, 0.95);
+      backdrop-filter: blur(15px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      padding: 8px 0;
+      min-width: 120px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+      z-index: 1001;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: -6px;
+        right: 20px;
+        width: 12px;
+        height: 12px;
+        background: rgba(15, 15, 35, 0.95);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-bottom: none;
+        border-right: none;
+        transform: rotate(45deg);
+      }
+    }
+
+    &-option {
+      display: block;
+      width: 100%;
+      padding: 8px 16px;
+      background: none;
+      border: none;
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 14px;
+      text-align: left;
+      cursor: pointer;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background: rgba(255, 255, 255, 0.1);
+        color: #ffffff;
+      }
+
+      &.active {
+        background: rgba(0, 212, 255, 0.1);
+        color: #00d4ff;
+      }
+
+      &:first-child {
+        border-radius: 12px 12px 0 0;
+      }
+
+      &:last-child {
+        border-radius: 0 0 12px 12px;
+      }
+    }
+  }
+}
+
+// Адаптивность для мобильных устройств
+@media (max-width: 768px) {
+  .header {
+    height: 70px;
+
+    &__container {
+      max-width: 95%;
+      padding: 0 20px;
+    }
+
+    &__nav {
+      display: none; // Скрываем навигацию на мобильных
+    }
+
+    &__logo {
+      .image {
+        width: 88px; // Уменьшаем размер логотипа на мобильных
+        height: 25px;
+      }
+    }
+
+    &__language {
+      &-btn {
+        width: 60px;
+        height: 28px;
+        font-size: 12px;
+      }
+
+      &-menu {
+        min-width: 100px;
+        right: -10px;
+      }
+    }
+  }
+} 

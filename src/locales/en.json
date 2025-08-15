@@ -1,0 +1,69 @@
+{
+  "navigation": {
+    "home": "Home",
+    "management": "Management",
+    "documents": "Documents"
+  },
+  "hero": {
+    "title": "Digital bank for business.\nBanking at life speed.",
+    "subtitle": "Grow your business from anywhere - banking that works without an office.",
+    "cta": "Leave a request"
+  },
+  "features": {
+    "title": "Finance. Payments. Services",
+    "subtitle": "Grow your business from anywhere - banking that works without an office.",
+    "limits": {
+      "title": "Limits in July",
+      "transfer": "Transfer",
+      "withdrawal": "Withdrawal",
+      "extra": "extra",
+      "description": "Your dashboard, your way. Personalize with customizable widgets — arrange the insights you need, exactly how you want."
+    },
+    "evolve": {
+      "title": "Evolve with your business",
+      "buy": "Buy",
+      "sell": "Sell",
+      "description": "Connect Zinda to your tools and explore new services as you grow. Seamless integrations. Constant innovation."
+    }
+  },
+  "management": {
+    "title": "Management Team",
+    "subtitle": "Meet our experienced leadership team driving Zinda Capital's success",
+    "positions": {
+      "ceo": "Chief Executive Officer",
+      "cfo": "Chief Financial Officer",
+      "coo": "Chief Operations Officer",
+      "cdo": "Chief Development Officer",
+      "cro": "Chief Risk Officer",
+      "chro": "Chief Human Resources Officer"
+    }
+  },
+  "documents": {
+    "title": "Documents",
+    "subtitle": "Access important legal documents, forms, and financial reports",
+    "sections": {
+      "legal": "Legal Documents",
+      "forms": "Forms and Applications"
+    },
+    "categories": {
+      "official": "Official",
+      "certificate": "Certificate",
+      "annual": "Annual",
+      "application": "Application",
+      "business": "Business"
+    },
+    "actions": {
+      "download": "Download PDF"
+    }
+  },
+  "footer": {
+    "address": "CJSC \"Zinda Capital\", Dushanbe, I. Somoni District, Rudaki Avenue 175",
+    "copyright": "© 2025, CJSC \"Zinda Capital\", 734003",
+    "license": "Banking License BMT No. 0000342 dated 02.07.2025"
+  },
+  "common": {
+    "contact": "Contact",
+    "phone": "Phone",
+    "email": "Email"
+  }
+}
